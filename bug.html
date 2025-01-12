@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Error</title>
+</head>
+<body>
+  <p>This is a paragraph.</p>
+  <div id="myDiv"></div>
+
+  <script>
+    // Attempting to access a non-existent element before it's added to the DOM
+    document.getElementById("myDiv").innerHTML = "<p>This is added to the wrong spot</p>";
+
+    // Correct way: add to DOM after it is created and ready
+    setTimeout(function(){
+      document.getElementById("myDiv").innerHTML = "<p>This is in the right place</p>"
+    },0);
+  </script>
+</body>
+</html>
