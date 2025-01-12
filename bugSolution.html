@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Corrected HTML</title>
+</head>
+<body>
+  <p>This is a paragraph.</p>
+  <div id="myDiv"></div>
+
+  <script>
+    // Correct way: add to DOM after it is created and ready
+    setTimeout(function(){
+      document.getElementById("myDiv").innerHTML = "<p>This is in the right place</p>";
+    },0);
+  </script>
+</body>
+</html>
